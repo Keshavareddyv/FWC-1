@@ -1,0 +1,380 @@
+\documentclass[12pt]{article}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+
+\definecolor{ncertblue}{RGB}{0,153,204}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.05}
+
+\begin{document}
+
+\begin{center}
+\includegraphics[width=6cm]{/storage/emulated/0/Pictures/Screenshots/IMG_20260202_154637.jpg}
+
+\textbf{ KESHAVA REDDY V}\\
+\textbf{ COMETFWC054}
+\end{center}
+
+{\color{ncertblue}\textbf{EXERCISE 4.1}}
+
+Evaluate the determinants in Exercises 1 and 2.
+
+\begin{enumerate}
+
+\item
+$ \left|
+\begin{matrix}
+2 & 4\\
+-5 & -1
+\end{matrix}
+\right| $
+
+\item
+(i)
+$ \left|
+\begin{matrix}
+\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{matrix}
+\right| $
+(ii)
+$ \left|
+\begin{matrix}
+x^2-x+1 & x-1\\
+x+1 & x+1
+\end{matrix}
+\right| $
+
+\item
+If
+$ A=
+\left[
+\begin{matrix}
+1 & 2\\
+4 & 2
+\end{matrix}
+\right] $,
+then show that
+$ |2A|=4|A| $.
+
+\item
+If
+$ A=
+\left[
+\begin{matrix}
+1 & 0 & 1\\
+0 & 1 & 2\\
+0 & 0 & 4
+\end{matrix}
+\right] $,
+then show that
+$ |3A|=27|A| $.
+
+\item
+Evaluate the determinants
+
+(i)
+$ \left|
+\begin{matrix}
+3 & -1 & -2\\
+0 & 0 & -1\\
+3 & -5 & 0
+\end{matrix}
+\right| $
+(ii)
+$ \left|
+\begin{matrix}
+3 & -4 & 5\\
+1 & 1 & -2\\
+2 & 3 & 1
+\end{matrix}
+\right| $
+
+(iii)
+$ \left|
+\begin{matrix}
+0 & 1 & 2\\
+-1 & 0 & -3\\
+-2 & 3 & 0
+\end{matrix}
+\right| $
+(iv)
+$ \left|
+\begin{matrix}
+2 & -1 & -2\\
+0 & 2 & -1\\
+3 & -5 & 0
+\end{matrix}
+\right| $
+
+\item
+If
+$ A=
+\left[
+\begin{matrix}
+1 & 1 & -2\\
+2 & 1 & -3\\
+5 & 4 & -9
+\end{matrix}
+\right] $,
+find
+$ |A| $.
+
+\item
+Find values of $x$, if
+
+(i)
+$ \left|
+\begin{matrix}
+2 & 4\\
+5 & 1
+\end{matrix}
+\right|=
+\left|
+\begin{matrix}
+2x & 4\\
+6 & x
+\end{matrix}
+\right| $
+(ii)
+$ \left|
+\begin{matrix}
+2 & 3\\
+4 & 5
+\end{matrix}
+\right|=
+\left|
+\begin{matrix}
+x & 3\\
+2x & 5
+\end{matrix}
+\right| $
+
+\item
+If
+$ \left|
+\begin{matrix}
+x & 2\\
+18 & x
+\end{matrix}
+\right|=
+\left|
+\begin{matrix}
+6 & 2\\
+18 & 6
+\end{matrix}
+\right| $,
+then $x$ is equal to
+
+(A) 6 \quad (B) $\pm6$ \quad (C) $-6$ \quad (D) 0
+
+\end{enumerate}
+
+\newpage
+
+{\color{ncertblue}\textbf{4.3 Properties of Determinants}}
+
+In the previous section, we have learnt how to expand the determinants.
+In this section, we will study some properties of determinants which simplify
+its evaluation by obtaining maximum number of zeros in a row or a column.
+These properties are true for determinants of any order.
+However, we shall restrict ourselves upto determinants of order 3 only.
+
+{\color{ncertblue}\textbf{Property 1}}
+
+The value of the determinant remains unchanged if its rows and columns are interchanged.
+
+\textbf{Verification} Let
+
+$ \Delta=
+\left|
+\begin{matrix}
+a_1 & a_2 & a_3\\
+b_1 & b_2 & b_3\\
+c_1 & c_2 & c_3
+\end{matrix}
+\right| $
+
+Expanding along first row, we get
+
+$ \Delta
+=a_1(b_2c_3-b_3c_2)
+-a_2(b_1c_3-b_3c_1)
++a_3(b_1c_2-b_2c_1) $
+
+By interchanging the rows and columns of $\Delta$, we get
+$ \Delta_1
+=a_1(b_2c_3-c_2b_3)
+-a_2(b_1c_3-b_3c_1)
++a_3(b_1c_2-b_2c_1) $
+
+Hence
+
+$ \Delta=\Delta_1 $.
+
+\begin{tcolorbox}[colback=ncertblue!15,colframe=ncertblue]
+\textbf{Note}
+If $R_i$ is $i$th row and $C_i$ is $i$th column, then for interchange
+of row and column, we symbolically write
+$ C_i \leftrightarrow R_i $.
+Let us verify the above property by example.
+\end{tcolorbox}
+
+\newpage
+
+{\color{ncertblue}\textbf{Example 6}}
+
+Verify Property 1 for
+
+$ \Delta=
+\left|
+\begin{matrix}
+2 & -3 & 5\\
+6 & 0 & 4\\
+1 & 5 & -7
+\end{matrix}
+\right| $
+
+\textbf{Solution}
+
+Expanding the determinant along first row, we have
+
+$ \Delta
+=2
+\left|
+\begin{matrix}
+0 & 4\\
+5 & -7
+\end{matrix}
+\right|
+-(-3)
+\left|
+\begin{matrix}
+6 & 4\\
+1 & -7
+\end{matrix}
+\right|
++5
+\left|
+\begin{matrix}
+6 & 0\\
+1 & 5
+\end{matrix}
+\right| $
+
+$ =2(0-20)+3(-42-4)+5(30-0) $
+
+$ =-40-138+150 $
+
+$ =-28 $
+
+By interchanging rows and columns, we get
+
+$ \Delta_1=
+\left|
+\begin{matrix}
+2 & 6 & 1\\
+-3 & 0 & 5\\
+5 & 4 & -7
+\end{matrix}
+\right| $
+
+Expanding along first column, we get
+
+$ \Delta_1
+=2
+\left|
+\begin{matrix}
+0 & 5\\
+4 & -7
+\end{matrix}
+\right|
+-(-3)
+\left|
+\begin{matrix}
+6 & 1\\
+4 & -7
+\end{matrix}
+\right|
++5
+\left|
+\begin{matrix}
+6 & 1\\
+0 & 5
+\end{matrix}
+\right| $
+
+$ =2(0-20)+3(-42-4)+5(30-0) $
+
+$ =-28 $
+
+Clearly
+
+$ \Delta=\Delta_1 $.
+
+Hence, Property 1 is verified.
+
+
+
+
+
+{\color{ncertblue}\textbf{Property 2}}
+
+If any two rows (or columns) of a determinant are interchanged,
+then sign of determinant changes.
+
+\textbf{Verification} Let
+
+$ \Delta=
+\left|
+\begin{matrix}
+a_1 & a_2 & a_3\\
+b_1 & b_2 & b_3\\
+c_1 & c_2 & c_3
+\end{matrix}
+\right| $
+
+Expanding along first row, we get
+
+$ \Delta
+=a_1(b_2c_3-b_3c_2)
+-a_2(b_1c_3-b_3c_1)
++a_3(b_1c_2-b_2c_1) $
+
+Interchanging first and third rows, the new determinant obtained is
+
+$ \Delta_1=
+\left|
+\begin{matrix}
+c_1 & c_2 & c_3\\
+b_1 & b_2 & b_3\\
+a_1 & a_2 & a_3
+\end{matrix}
+\right| $
+
+Expanding $\Delta_1$ along third row, we get
+
+$ \Delta_1
+=a_1(c_2b_3-b_2c_3)
+-a_2(c_1b_3-c_3b_1)
++a_3(b_2c_1-b_1c_2) $
+
+$ =-\left[
+a_1(b_2c_3-b_3c_2)
+-a_2(b_1c_3-b_3c_1)
++a_3(b_1c_2-b_2c_1)
+\right] $
+
+Clearly
+
+$ \Delta_1=-\Delta $.
+
+Similarly, we can verify the result by interchanging any two columns.
+
+\end{document}

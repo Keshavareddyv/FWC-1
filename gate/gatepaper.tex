@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{graphicx}
+\geometry{a4paper, margin=1in}
+
+\begin{document}
+
+\begin{center}
+\includegraphics[width=5cm]{/data/data/com.termux/files/home/storage/dcim/MyAlbums/documents/IMG_20260202_154637.jpg}
+\end{center}
+
+\vspace{0.2cm}
+
+\begin{center}
+\textbf{Name: Keshava Reddy V} \\
+\textbf{ID: COMETFWC054}
+\end{center}
+
+\vspace{0.2cm}
+
+\begin{center}
+{\Large \textbf{GATE CS 2010}}
+\end{center}
+
+\vspace{0.3cm}
+
+\textbf{6. The minterm expansion of $f(P,Q,R) = PQ + QR + PR$ is}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item $m_2 + m_4 + m_6 + m_7$
+\item $m_0 + m_1 + m_3 + m_5$
+\item $m_0 + m_1 + m_6 + m_7$
+\item $m_2 + m_3 + m_4 + m_5$
+\end{enumerate}
+
+\vspace{0.3cm}
+
+\textbf{SOLUTION:}
+
+\vspace{0.3cm}
+
+Given,
+
+$f(P,Q,R) = PQ + QR + PR$
+
+\vspace{0.3cm}
+
+Expand each term:
+
+\[
+PQ = PQ(R + \overline{R}) = PQR + PQ\overline{R}
+\]
+
+\[
+QR = QR(P + \overline{P}) = PQR + \overline{P}QR
+\]
+
+\[
+PR = PR(Q + \overline{Q}) = PQR + P\overline{Q}R
+\]
+
+\vspace{0.3cm}
+
+Combining distinct minterms:
+
+\[
+f(P,Q,R) = \overline{P}QR + P\overline{Q}R + PQ\overline{R} + PQR
+\]
+
+\vspace{0.3cm}
+
+These correspond to:
+
+$m_3, m_5, m_6, m_7$
+
+\vspace{0.3cm}
+
+Therefore,
+
+$f(P,Q,R) = m_3 + m_5 + m_6 + m_7$
+
+\vspace{0.3cm}
+
+\textbf{Final Answer:} $\boxed{m_3 + m_5 + m_6 + m_7}$
+
+\end{document}

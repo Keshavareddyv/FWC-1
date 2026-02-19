@@ -135,6 +135,26 @@ Common Cathode & GND \\
 
 \vspace{1cm}
 
+\section*{Code Uploading Steps}
+
+\begin{enumerate}
+\setlength{\itemsep}{6pt}
+
+\item Create a PlatformIO project.
+
+\item Write the program inside \texttt{src/main.cpp}.
+
+\item Run \texttt{pio run} to build the project.
+
+\item Connect Arduino UNO using OTG cable.
+
+\item Run \texttt{pio run --target upload} to upload the program.
+
+\item Verify the output on hardware.
+
+\end{enumerate}
+
+
 \section*{Circuit Diagram}
 
 \begin{center}

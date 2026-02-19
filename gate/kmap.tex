@@ -1,0 +1,154 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{enumitem}
+
+\geometry{margin=1in}
+
+\begin{document}
+
+\begin{center}
+
+\includegraphics[width=5cm]{/storage/emulated/0/DCIM/MyAlbums/documents/IMG_20260202_154637.jpg}
+
+\vspace{0.5cm}
+
+Name: Keshava Reddy V \\
+ID: COMETFWC054
+
+\vspace{0.5cm}
+
+{\Large \textbf{GATE CS 2010}}
+
+\end{center}
+
+\vspace{1cm}
+
+\section*{Question 6}
+
+{ The minterm expansion of $f(P,Q,R) = PQ + QR + PR$ is}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item $m_2 + m_4 + m_6 + m_7$
+\item $m_0 + m_1 + m_3 + m_5$
+\item $m_0 + m_1 + m_6 + m_7$
+\item $m_2 + m_3 + m_4 + m_5$
+\end{enumerate}
+
+
+\section*{Question Analysis}
+
+Given function: $f(P,Q,R) = PQ + QR + PR$
+
+
+\vspace{0.4cm}
+\begin{itemize}
+\item This is a 3-input Majority Function.
+\item The output becomes 1 when at least two inputs are 1.
+\vspace{1cm}
+\end{itemize}
+
+
+
+\section*{Truth Table}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+P & Q & R & F \\
+\hline
+0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 1 & 1 & 1 \\
+1 & 0 & 0 & 0 \\
+1 & 0 & 1 & 1 \\
+1 & 1 & 0 & 1 \\
+1 & 1 & 1 & 1 \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.6cm}
+
+Minterms where $F = 1$:
+
+$m_3 + m_5 + m_6 + m_7$
+
+\vspace{0.4cm}
+
+Therefore,
+
+$f(P,Q,R) = m_3 + m_5 + m_6 + m_7$
+
+\vspace{1cm}
+
+\section*{Hardware Implementation}
+\begin{itemize}
+\item The above Boolean function is implemented using Arduino UNO and a 7447 BCD to Seven Segment Decoder IC.
+\item The logical output of the function is given as input to the 7447 IC, which drives a Common Anode Seven Segment Display.
+\item The 7447 converts the BCD input into corresponding segment signals, and 220$\Omega$ current limiting resistors are used to protect the display segments.
+\item The hardware setup verifies the theoretical Majority Function experimentally.
+\end{itemize}
+\vspace{1cm}
+
+
+\section*{Required Components}
+
+\begin{enumerate}
+\item Arduino UNO
+\item Breadboard
+\item Seven Segment Display (Common Cathode)
+\item 7447
+\item Jumper Wires
+\item USB Cable
+\end{enumerate}
+
+\vspace{1cm}
+
+\section*{Pin Connections}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Component & Arduino Pin \\
+\hline
+Input P & Digital 2 \\
+Input Q & Digital 3 \\
+Input R & Digital 4 \\
+Segment a & Digital 5 \\
+Segment b & Digital 6 \\
+Segment c & Digital 7 \\
+Segment d & Digital 8 \\
+Segment e & Digital 9 \\
+Segment f & Digital 10 \\
+Segment g & Digital 11 \\
+Common Cathode & GND \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{1cm}
+
+\section*{Circuit Diagram}
+
+\begin{center}
+
+\includegraphics[width=14cm]{/storage/emulated/0/DCIM/Camera/IMG_20260219_111637.jpg}
+
+\end{center}
+
+\vspace{1cm}
+
+\section*{Conclusion}
+\begin{itemize}
+\item The function outputs 1 when at least two inputs are 1.
+\item The hardware implementation verifies the theoretical Majority Function and matches the minterm expansion:
+\item $m_3 + m_5 + m_6 + m_7$
+\end{itemize}
+\end{document}

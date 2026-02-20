@@ -1,0 +1,108 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{amsmath}
+\geometry{margin=1in}
+
+\begin{document}
+\begin{center}
+\includegraphics[width=5cm]{/storage/emulated/0/DCIM/MyAlbums/documents/IMG_20260202_154637.jpg}
+\end{center}
+
+\vspace{0.3cm}
+
+\begin{center}
+\textbf{Name:} Keshava Reddy V\\
+\textbf{ID:} COMETFWC054
+\end{center}
+\vspace{0.5cm}
+
+
+\begin{center}
+\Large \textbf{GATE CS 2010}
+\end{center}
+
+\vspace{0.5cm}
+\textbf{Question 9}
+
+\vspace{0.3cm}
+
+The Boolean expression for the output $f$ of the multiplexer shown below is:
+
+\vspace{0.3cm}
+
+\includegraphics[width=8cm]{IMG_20260220_122317.jpg}
+
+\vspace{0.5cm}
+
+\textbf{Options}
+
+(a) $P \oplus Q \oplus R$  
+
+(b) $\overline{P \oplus Q \oplus R}$  
+
+(c) $P + Q + R$  
+
+(d) $\overline{P + Q + R}$  
+
+\vspace{0.8cm}
+
+\textbf{Solution}
+
+\vspace{0.3cm}
+
+The given circuit is a 4:1 Multiplexer.
+
+Select lines: $P$ and $Q$.
+
+Inputs:
+
+$I_0 = R$  
+
+$I_1 = \overline{R}$  
+
+$I_2 = \overline{R}$  
+
+$I_3 = R$  
+
+\vspace{0.4cm}
+
+General equation of 4:1 MUX:
+
+$f = \overline{P}\overline{Q}I_0 + \overline{P}QI_1 + P\overline{Q}I_2 + PQI_3$
+
+\vspace{0.4cm}
+
+Substituting values:
+
+$f = \overline{P}\overline{Q}R + \overline{P}Q\overline{R} + P\overline{Q}\overline{R} + PQR$
+
+\vspace{0.4cm}
+
+Grouping terms:
+
+$f = R(\overline{P}\overline{Q} + PQ) + \overline{R}(\overline{P}Q + P\overline{Q})$
+
+\vspace{0.4cm}
+
+Using identities:
+
+$\overline{P}\overline{Q} + PQ = P \odot Q$
+
+$\overline{P}Q + P\overline{Q} = P \oplus Q$
+
+\vspace{0.4cm}
+
+Therefore,
+
+$f = P \oplus Q \oplus R$
+
+\vspace{0.8cm}
+
+\textbf{Final Answer}
+
+$f = P \oplus Q \oplus R$
+
+Correct option: (a)
+
+\end{document}

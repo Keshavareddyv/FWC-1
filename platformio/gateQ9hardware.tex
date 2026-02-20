@@ -1,0 +1,176 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\geometry{margin=1in}
+
+\begin{document}
+
+\begin{center}
+\includegraphics[width=5cm]{/storage/emulated/0/DCIM/MyAlbums/documents/IMG_20260202_154637.jpg}
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{center}
+\textbf{Name:} Keshava Reddy V \\
+\textbf{ID:} COMETFWC054
+\end{center}
+\vspace{0.8cm}
+
+\begin{center}
+\Large \textbf{GATE CS 2010 -- Question 9}
+\end{center}
+
+\vspace{0.8cm}
+
+\section*{Question}
+
+The Boolean expression for the output $f$ of the multiplexer shown below is:
+
+\vspace{0.5cm}
+
+\begin{center}
+\includegraphics[width=8cm]{images/IMG_20260220_161244.jpg}
+\end{center}
+
+\vspace{0.5cm}
+
+\textbf{Options:}
+
+\begin{itemize}
+\item[(a)] $P \oplus Q \oplus R$
+\item[(b)] $\overline{P \oplus Q \oplus R}$
+\item[(c)] $P + Q + R$
+\item[(d)] $\overline{P + Q + R}$
+\end{itemize}
+
+\vspace{0.8cm}
+
+\section*{Question Analysis}
+
+The given circuit is a 4:1 Multiplexer.
+
+\textbf{Select lines:} $P$ and $Q$
+
+\textbf{Inputs:}
+\begin{itemize}
+\item $I_0 = R$
+\item $I_1 = \overline{R}$
+\item $I_2 = \overline{R}$
+\item $I_3 = R$
+\end{itemize}
+
+\textbf{General 4:1 MUX equation:}
+
+$f = \overline{P}\overline{Q}I_0 + \overline{P}QI_1 + P\overline{Q}I_2 + PQI_3$
+
+\textbf{Substituting values:}
+
+$f = \overline{P}\overline{Q}R + \overline{P}Q\overline{R} + P\overline{Q}\overline{R} + PQR$
+
+\textbf{Grouping terms:}
+
+$f = R(\overline{P}\overline{Q} + PQ) + \overline{R}(\overline{P}Q + P\overline{Q})$
+
+Using identities:
+
+$\overline{P}\overline{Q} + PQ = P \odot Q$
+
+$\overline{P}Q + P\overline{Q} = P \oplus Q$
+
+Therefore,
+
+$f = P \oplus Q \oplus R$
+
+\vspace{0.8cm}
+
+\section*{Truth Table}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+P & Q & R & f \\
+\hline
+0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 1 \\
+0 & 1 & 0 & 1 \\
+0 & 1 & 1 & 0 \\
+1 & 0 & 0 & 1 \\
+1 & 0 & 1 & 0 \\
+1 & 1 & 0 & 0 \\
+1 & 1 & 1 & 1 \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.8cm}
+
+\section*{Circuit Diagram}
+
+\begin{center}
+\includegraphics[width=10cm]{images/IMG_20260220_153429.jpg}
+\end{center}
+\vspace{0.8cm}
+
+\section*{Required Components}
+
+\begin{itemize}
+\item Arduino UNO
+\item Breadboard
+\item 7-Segment Display (Common Anode)
+\item IC 7447
+\item Connecting wires
+\item resistor
+\item Switches
+\end{itemize}
+
+\vspace{0.8cm}
+
+\section*{Pin Connections}
+
+\textbf{Input Connections:}
+
+\begin{itemize}
+\item $P \rightarrow$ Digital Pin 2
+\item $Q \rightarrow$ Digital Pin 3
+\item $R \rightarrow$ Digital Pin 4
+\end{itemize}
+
+\textbf{7447 Connections:}
+
+\begin{itemize}
+\item A $\rightarrow$ Pin 8
+\item B $\rightarrow$ Pin 9
+\item C $\rightarrow$ Pin 10
+\item D $\rightarrow$ Pin 11
+\item Common Anode $\rightarrow$ +5V
+\end{itemize}
+
+\vspace{0.8cm}
+
+\section*{Code Uploading Steps}
+
+\begin{enumerate}
+\item Create a PlatformIO project.
+\item Write the code in \texttt{src/main.cpp}.
+\item Run the command \texttt{pio run}.
+\item Copy the generated .hex file.
+\item Connect Arduino UNO using OTG cable.
+\item Upload using “Upload Precompiled” option.
+\item Observe the output on the 7-segment display.
+\end{enumerate}
+
+\vspace{0.8cm}
+
+\section*{Conclusion}
+
+\item The output obtained matches the truth table.
+
+\item Hence the Boolean expression of the given multiplexer is:
+
+\begin{itemize}
+\item Correct option: (a)   $ f = P \oplus Q \oplus R$
+\end{itemize}
+\end{document}

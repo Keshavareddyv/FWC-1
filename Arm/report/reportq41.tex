@@ -1,0 +1,183 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+
+\geometry{margin=1in}
+\onehalfspacing
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{COMETFWC054}
+\lhead{Digital Logic}
+\cfoot{\thepage}
+
+\begin{document}
+
+\begin{center}
+\includegraphics[width=4cm]{assets/logo.jpg}
+
+\vspace{0.5cm}
+
+{\Large \textbf{ARM 2010 EC Question 41}}
+
+\vspace{0.5cm}
+
+\textbf{Name: KESHAVA REDDY V} \\
+\textbf{ID: COMETFWC054}
+\end{center}
+
+\vspace{1cm}
+
+\section*{Question}
+
+For any set of inputs, $A$ and $B$, the following circuits give the same output $Q$, except one. Which one is it? (GATE PH 2010)
+
+\begin{center}
+\includegraphics[width=0.8\textwidth]{pics/q41.jpg}
+\end{center}
+
+\section*{Question Analysis}
+
+We analyze each circuit by deriving its Boolean expression.
+
+\subsection*{Option (a)}
+
+The circuit represents:
+
+\[
+Q = (A + B) \cdot \overline{B}
+\]
+
+Using Boolean algebra:
+
+\[
+Q = A\overline{B} + B\overline{B}
+\]
+
+Since $B\overline{B} = 0$,
+
+\[
+Q = A\overline{B}
+\]
+
+\subsection*{Option (b)}
+
+This circuit directly represents:
+
+\[
+Q = A \cdot \overline{B}
+\]
+
+\subsection*{Option (c)}
+
+After simplifying the logic network:
+
+\[
+Q = A\overline{B}
+\]
+
+\subsection*{Option (d)}
+
+This circuit represents:
+
+\[
+Q = \overline{A} + B
+\]
+
+This expression is different from $A\overline{B}$.
+
+\section*{Conclusion from Analysis}
+
+Options (a), (b), and (c) produce:
+
+\[
+Q = A\overline{B}
+\]
+
+Option (d) produces:
+
+\[
+Q = \overline{A} + B
+\]
+
+Hence, the incorrect circuit is:
+
+\[
+\boxed{\text{Option (d)}}
+\]
+
+\section*{Truth Table}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+A & B & $A\overline{B}$ & $\overline{A}+B$ \\
+\hline
+0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 1 \\
+1 & 0 & 1 & 0 \\
+1 & 1 & 0 & 1 \\
+\hline
+\end{tabular}
+\end{center}
+
+The table clearly shows Option (d) differs from the other circuits.
+
+\section*{Hardware Implementation}
+
+The Boolean function $Q = A\overline{B}$ is implemented using Raspberry Pi Pico 2W.
+
+The microcontroller generates all input combinations using a loop. For each input:
+
+\[
+Q = A\overline{B}
+\]
+
+If $Q = 1$, the LED turns ON and the seven-segment display shows 1.  
+If $Q = 0$, the LED turns OFF and the display shows 0.
+
+\section*{Required Components}
+
+\begin{itemize}
+\item Raspberry Pi Pico 2W
+\item Seven Segment Display
+\item LED
+\item 330$\Omega$ resistors
+\item Breadboard
+\item Jumper wires
+\end{itemize}
+
+\section*{Experimental Setup}
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{pics/setup1.jpg}
+
+\vspace{0.5cm}
+
+\includegraphics[width=0.7\textwidth]{pics/setup2.jpg}
+\end{center}
+
+\section*{Final Conclusion}
+
+The circuits in options (a), (b), and (c) are equivalent and implement:
+
+\[
+Q = A\overline{B}
+\]
+
+Option (d) implements a different function:
+
+\[
+Q = \overline{A} + B
+\]
+
+Therefore, the correct answer is:
+
+\[
+\boxed{\text{Option (d)}}
+\]
+
+\end{document}
